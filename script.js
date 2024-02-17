@@ -77,18 +77,7 @@ smMenuCloseBtn.addEventListener('click', () => {
   smMenu.classList.remove('main-header__sm-menu--active')
 })
 
-
-
-
-
-// ---
-const themeColorSelector = document.querySelector('.themeClrSelector')
-const themeColorSelectorInput = document.querySelector(
-  '.themeClrSelector__input'
-)
 const root = document.documentElement;
-
-
 
 const hexToRgb = (hex) => {
   let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
@@ -111,11 +100,7 @@ const eventFire = (el, etype) => {
   }
 }
 
-themeColorSelector.addEventListener('click', () => {
-  eventFire(themeColorSelectorInput, 'input')
-})
-
-const setDynamicColor = (color) => {
+const setDynamicColor = (color) => { 
 
   const { r, g, b } = hexToRgb(`${color}`)
   
@@ -123,17 +108,6 @@ const setDynamicColor = (color) => {
   //localStorage.setItem('color', color)
 }
 
-themeColorSelectorInput.addEventListener('input', (e) => {
-  setDynamicColor(e.target.value)
-})
-
-// if (localStorage.getItem('color')) {
-//   let userSelectedColor = localStorage.getItem('color')
-//   themeColorSelectorInput.value = userSelectedColor
-//   setDynamicColor(userSelectedColor)
-// }
-
-// ---
 const headerLogoConatiner = document.querySelector('.main-header__logo-container')
 
 headerLogoConatiner.addEventListener('click', () => {
